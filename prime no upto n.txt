@@ -1,0 +1,27 @@
+/*
+Given an integer N, print all the prime numbers that lie in the range 2 to N (both inclusive).
+Print the prime numbers in different lines.
+*/
+
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout<<"Enter n";
+	cin>>n;
+	
+	for(int d=2;d<=n;d++){
+		bool divided=false;
+			for(int j=2; j<d;j++){
+				if(d%j==0){
+					divided=true;
+					break;
+				}
+			}
+			if(!divided){
+				cout<<d<<endl;
+			}
+		}
+	
+}
